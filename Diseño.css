@@ -1,3 +1,150 @@
-p{
-    color: #b50d6a;
+/* Definimos la paleta de colores*/
+:root {
+    --color-negroPuro: #090909;
+    --color-negroSuave: #1a1a1a;
+    --color-vinoOscuro: #45052b;
+    --color-vinoMedio: #750b43;
+    --color-magentaOscuro: #a50b5e;
+    --color-magentaBrillante: #d50e79;
+    --color-magentaClaro: #f02693;
+    --color-gris: #989898;
+    --color-petaloRosa: #ffd1e3;
+    --color-blancoRosa: #fff0f6;
+    --color-blanco: #ffffff;
+}
+
+/*Estilo general*/
+body {
+    background-color: var(--color-blancoRosa);
+    color: var(--color-negroSuave);
+    font-family:'segoe ui', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1#InicioGalexa {
+    color: var(--color-blanco);
+    font-weight: 700;
+    margin: 0;
+    padding: 20px 0 10px;
+    font-size: 2.5rem;
+}
+
+h2,h3,h4{
+    color: var(--color-vinoMedio);
+    font-weight: 600;
+}
+
+div:nth-of-type(1) {
+    text-align: center;
+    background-color: var(--color-magentaBrillante);
+    width: 100%;
+    max-width: 100%;
+    padding: 30px 0;
+}
+
+div:nth-of-type(2) {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--color-magentaOscuro);
+    margin-bottom: 25px;
+}
+
+div:nth-of-type(2) a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+div:nth-of-type(2) a:hover {
+    color: var(--color-petaloRosa);
+}
+
+body>div{
+    max-width: 1000px;
+    padding: 20px;
+}
+
+/*Estilo de "Beneficios"*/
+.ListasInicio {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    list-style-type: none;
+    padding-left: 0;
+    margin: 20px 0;
+}
+
+.ListasInicio li {
+    background-color: var(--color-blanco);
+    color: var(--color-negroSuave);
+    padding: 12px 16px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease
+
+}
+
+/*Estilo Formulario*/
+form {
+    background-color: var(--color-blanco);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--color-petaloRosa);
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+    color: var(--color-black-soft);
+}
+
+form input[type="text"],
+form input[type="email"]{
+    width: 100%;
+    padding: 10px 14px;
+    margin-top: 5px;
+    border: 1px solid var(--color-gris);
+    border-radius: 6px;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus {
+    border-color: var(--color-magentaBrillante);
+    box-shadow: 0 0 5px rgba(213, 14, 121, 0.5);
+}
+
+form input[type="submit"] {
+    background-color: var(--color-magentaBrillante);
+    color: var(--color-blanco);
+    padding: 12px 28px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 25px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+}
+form input[type="submit"]:hover {
+    background-color: var(--color-magentaClaro);
+    transform: translateY(-2px);
+}
+
+div img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
 }
