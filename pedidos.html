@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galexa - Mi Perfil</title>
+    <link rel="stylesheet" href="Diseño.css">
+    <style>
+        .profile-container {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 2rem;
+        }
+        .profile-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            border: 1px solid #f3f4f6;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            text-align: center;
+        }
+        .avatar-placeholder {
+            width: 90px;
+            height: 90px;
+            background: #fce7f3;
+            color: #db2777;
+            font-size: 2rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin: 0 auto 1rem auto;
+        }
+        .profile-info {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            border: 1px solid #f3f4f6;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+        .profile-info h3 {
+            margin-top: 0;
+            color: #831843;
+            border-bottom: 2px solid #fce7f3;
+            padding-bottom: 0.5rem;
+        }
+        .info-group {
+            margin-bottom: 1rem;
+        }
+        .info-group label {
+            display: block;
+            font-size: 0.85rem;
+            color: #6b7280;
+        }
+        .info-group span {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #1f2937;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="galexa.html" class="logo">GALEXA</a>
+        <nav>
+            <ul>
+                <li><a href="galexa.html">Inicio</a></li>
+                <li><a href="electrodomesticos.html">Productos y servicios</a></li>
+                <li><a href="seguimiento-pedidos.html">Seguimiento de pedidos</a></li>
+                <li><a href="perfil.html" class="active">Perfil</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="profile-container">
+        <!-- Tarjeta de Usuario -->
+        <div class="profile-card">
+            <div class="avatar-placeholder">RG</div>
+            <h3 style="margin: 0; color: #1f2937;">Rodrigo C.</h3>
+            <p style="color: #6b7280; font-size: 0.9rem; margin-top: 5px;">Cliente Galexa</p>
+            <button class="btn-primary" style="width: 100%; margin-top: 1rem; padding: 0.5rem; font-size: 0.9rem;">Editar Perfil</button>
+        </div>
+
+        <!-- Detalles de la Cuenta -->
+        <div class="profile-info">
+            <h3>Información Personal</h3>
+            <div class="info-group">
+                <label>Nombre Completo</label>
+                <span>Rodrigo Pedro Carrillo Gutierrez</span>
+            </div>
+            <div class="info-group">
+                <label>Correo Electrónico</label>
+                <span>rodrigo.carrillo@gmail.com</span>
+            </div>
+            <div class="info-group">
+                <label>Teléfono de Contacto</label>
+                <span>+51 900 000 000</span>
+            </div>
+            <div class="info-group">
+                <label>Ciudad / Dirección Principal</label>
+                <span>Lima, Perú</span>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Galexa. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

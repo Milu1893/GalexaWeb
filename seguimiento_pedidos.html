@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galexa - Seguimiento de pedidos</title>
+    <link rel="stylesheet" href="Diseño.css">
+    <style>
+        .tracking-section {
+            max-width: 600px;
+            margin: 4rem auto;
+            padding: 0 1rem;
+        }
+        .tracking-box {
+            background: linear-gradient(145deg, #831843, #500822);
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            color: white;
+            text-align: center;
+            box-shadow: 0 15px 30px rgba(131, 24, 67, 0.2);
+        }
+        .tracking-box h2 {
+            margin-top: 0;
+            font-size: 1.8rem;
+        }
+        .tracking-box p {
+            color: #fbcfe8;
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+        }
+        .input-group {
+            display: flex;
+            gap: 10px;
+            background: white;
+            padding: 6px;
+            border-radius: 50px;
+        }
+        .input-group input {
+            flex: 1;
+            border: none;
+            padding: 0.75rem 1.25rem;
+            border-radius: 50px;
+            outline: none;
+            font-size: 1rem;
+        }
+        .input-group button {
+            background-color: #db2777;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .input-group button:hover {
+            background-color: #be185d;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="galexa.html" class="logo">GALEXA</a>
+        <nav>
+            <ul>
+                <li><a href="galexa.html">Inicio</a></li>
+                <li><a href="electrodomesticos.html">Productos y servicios</a></li>
+                <li><a href="seguimiento-pedidos.html" class="active">Seguimiento de pedidos</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="tracking-section">
+        <div class="tracking-box">
+            <h2>Rastrea tu pedido en línea</h2>
+            <p>Ingresa tu número de orden o código de seguimiento para conocer el estado actual de tu envío.</p>
+            <div class="input-group">
+                <input type="text" placeholder="Ej: GLX-98421">
+                <button type="button">Rastrear</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Galexa. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
