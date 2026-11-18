@@ -2,74 +2,308 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galexa - Inicio</title>
-    <!-- Añadimos bootstrap -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Conexión con CSS -->
+    <!-- Estilos propios -->
     <link rel="stylesheet" href="Diseño.css">
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" defer></script>
 </head>
 <body>
-    <div>
-        <h1 id="InicioGalexa">Galexa</h1>
-    </div>
-    <div>
-        <a href="galexa.html">Pagina de inicio</a>
-        <a href="perfil.html">Perfil</a>
-    </div>
-    <div>
-        <p>En Galexa sabemos que el hogar funciona mejor cuando todo a tu alrededor te hace la vida más fácil. </p>
-        <p>¿Esa lavadora que ya suena como avión, o esa plancha que pide la jubilación? Es hora de darles un descanso. Queremos estar contigo en cada etapa de tu hogar con electrodomésticos modernos, eficientes y listos para facilitarte los días. ¿Buscas algo en específico? </p>
-        <p>En Galexa lo encontraras</p>
-        <h2>¿Por qué elegirnos?</h2>
-        <ul class="ListasInicio">
-            <li>Atención disponible 24/7</li>
-            <li>Instalaciones 100% accesibles</li>
-            <li>Estacionamiento privado y seguro</li>
-            <li>Las mejores tarifas del mercado</li>
-            <li>Garantía de satisfacción asegurada</li>
-            <li>Atención al cliente personalizada</li>
-            <li>Envíos rápidos y seguros</li>
-            <li>Prácticas ecoamigables y sostenibles</li>
-            <li>Métodos de pago flexibles</li>
-            <li>Soporte técnico especializado</li>
-            <li>Promociones y beneficios exclusivos</li>
-            <li>Espacio 100% Pet & Family Friendly</li>
-            <li>Instalación y mantenimiento profesional</li>
-            <li>Conexión Wi-Fi gratuita</li>
-        </ul>
-    </div>
-    <div>
-        <h2>Nuestros productos</h2>
-        <p>Te ofrecemos la combinación perfecta entre excelente precio, tecnología y durabilidad. Contamos con un catálogo supercompleto y organizado para que encuentres justo lo que buscas sin vueltas: desde refrigeradores, televisores y lavadoras, hasta microondas, aire acondicionado y pequeños electrodomésticos. </p>
-        <p>Trabajar con marcas de confianza nos permite traerte opciones modernas para cada rincón de tu casa. Si lo necesitas para tu hogar, aquí lo encuentras.</p>
 
-        <h4>Consigue lo que buscas</h4>
-        <img src="Imagenes/electrodomesticos.jpg" alt="Electrodomésticos">
-        <img src="Imagenes/manajeYcocina.png" alt="Muebles y Cocina">
-        <img src="Imagenes/mueblesYhogar.png" alt="Muebles y Hogar">
-        <img src="Imagenes/atencionTecnica.jpg" alt="Atención Técnica">
-    </div>
-    <div>
-        <form action="destinoejemplo.php" method="post">
-            <h3>Formulario de Contacto</h3>
-            <p>Cuentanos sobre tu solicitud, ¡con gusto te atenderemos lo antes posible!</p>
-            <label for="solicitud">Solicitud:</label>
-            <input type="text" id="solicitud" name="Mensaje" required placeholder="Cuentanos sobre tu solicitud, ¡con gusto te atenderemos lo antes posible!">
-            
-            <label for="NombresApellidos">Nombres y Apellidos: </label>
-            <input type="text" id="NombresApellidos" name="UserSolicitud" required minlength="3" maxlength="100" placeholder="John Doe">
+    <div class="anuncio">🚚 <strong>Envíos a todo el Perú</strong> · Hasta 12 cuotas sin interés · Atención 24/7</div>
 
-            <label for="email">EMAIL:</label>
-            <input type="email" id="email" name="SolicitudUserEmail" required placeholder="JohnDoe@gmail.com">
+    <header class="cabecera">
+        <div class="contenedor">
+            <a href="galexa.html" class="logo" id="InicioGalexa">GALEXA</a>
+            <button class="boton-menu" aria-label="Abrir menú" aria-expanded="false" onclick="alternarMenu(this)">☰</button>
+            <nav class="navegacion" id="menu">
+                <a href="galexa.html" class="activo">Inicio</a>
+                <a href="productos.html">Productos y servicios</a>
+                <a href="pedidos.html">Seguimiento de pedidos</a>
+                <a href="perfil.html">Perfil</a>
+            </nav>
+        </div>
+    </header>
 
-            <label for="telefono">Teléfono:</label>
-            <input type="text" id="telefono" name="SolicitudUserTelefono" required placeholder="987 654 321">
+    <main>
+        <section class="hero">
+            <div class="contenedor">
+                <div>
+                    <span class="hero-insignia">¡TEMPORADA DE OFERTAS!</span>
+                    <h1>Tu hogar, <em>más fácil</em> con Galexa.</h1>
+                    <p class="lead">En Galexa sabemos que el hogar funciona mejor cuando todo a tu alrededor te hace la vida más fácil. Electrodomésticos modernos, eficientes y listos para tus días.</p>
+                    <div class="acciones">
+                        <a href="productos.html" class="btn-galexa">Ver productos →</a>
+                        <a href="pedidos.html" class="btn-galexa contorno">Rastrear mi pedido</a>
+                    </div>
+                </div>
+                <div class="hero-imagen">
+                    <img src="Imagenes/electrodomesticos.jpg" alt="Electrodomésticos Galexa">
+                    <div class="hero-tarjeta"><strong>Hasta -40%</strong>en electrodomésticos seleccionados</div>
+                </div>
+            </div>
+        </section>
 
-            <input type="submit" value="Enviar">
-        </form>
-    </div>
+        <div class="franja">
+            <div class="contenedor">
+                <div class="franja-item"><div class="franja-icono">🚚</div><div><strong>Envíos rápidos</strong><span>A todo el Perú</span></div></div>
+                <div class="franja-item"><div class="franja-icono">🛡️</div><div><strong>Garantía asegurada</strong><span>Compra tranquilo</span></div></div>
+                <div class="franja-item"><div class="franja-icono">💳</div><div><strong>Pagos flexibles</strong><span>Cuotas y más</span></div></div>
+                <div class="franja-item"><div class="franja-icono">🎧</div><div><strong>Soporte 24/7</strong><span>Siempre contigo</span></div></div>
+            </div>
+        </div>
+
+        <section class="seccion">
+            <div class="contenedor">
+                <div class="encabezado-seccion revelar">
+                    <span class="etiqueta">Compra por categoría</span>
+                    <h2>Nuestros productos</h2>
+                    <p>Te ofrecemos la combinación perfecta entre excelente precio, tecnología y durabilidad. Desde refrigeradores, televisores y lavadoras, hasta microondas, aire acondicionado y pequeños electrodomésticos.</p>
+                </div>
+                <div class="grid-categorias revelar">
+                    <a href="productos.html" class="categoria"><span class="emoji">🧊</span><h3>Refrigeración</h3><p>Refrigeradoras y congeladoras</p></a>
+                    <a href="productos.html" class="categoria"><span class="emoji">📺</span><h3>Televisores</h3><p>Smart TV y audio</p></a>
+                    <a href="productos.html" class="categoria"><span class="emoji">🧺</span><h3>Lavado</h3><p>Lavadoras y secadoras</p></a>
+                    <a href="productos.html" class="categoria"><span class="emoji">🍳</span><h3>Cocina</h3><p>Microondas y pequeños electros</p></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion seccion-rosa">
+            <div class="contenedor">
+                <div class="encabezado-seccion revelar">
+                    <span class="etiqueta">Noticias y novedades</span>
+                    <h2>Lo último en Galexa</h2>
+                    <p>Entérate primero de lanzamientos, campañas y beneficios exclusivos.</p>
+                </div>
+                <div class="grid-noticias revelar">
+                    <article class="noticia">
+                        <div class="noticia-visual">🔥</div>
+                        <div class="noticia-cuerpo">
+                            <div class="noticia-meta"><span class="chip">Campaña</span><span>11 nov 2026</span></div>
+                            <h3>Cyber Galexa: descuentos de hasta 40% en electrodomésticos</h3>
+                            <p>Aprovecha precios especiales en refrigeradoras, lavadoras y televisores, disponibles también en nuestras tiendas virtuales aliadas.</p>
+                            <a href="productos.html" class="leer-mas">Ver ofertas →</a>
+                        </div>
+                    </article>
+                    <article class="noticia">
+                        <div class="noticia-visual">🌱</div>
+                        <div class="noticia-cuerpo">
+                            <div class="noticia-meta"><span class="chip">Sostenible</span><span>05 nov 2026</span></div>
+                            <h3>Nueva línea eficiente y ecoamigable</h3>
+                            <p>Equipos que ahorran energía y cuidan el planeta.</p>
+                            <a href="productos.html" class="leer-mas">Conocer más →</a>
+                        </div>
+                    </article>
+                    <article class="noticia">
+                        <div class="noticia-visual">📦</div>
+                        <div class="noticia-cuerpo">
+                            <div class="noticia-meta"><span class="chip">Servicio</span><span>28 oct 2026</span></div>
+                            <h3>Ahora puedes rastrear tu pedido en línea</h3>
+                            <p>Sigue cada etapa de tu envío desde tu celular.</p>
+                            <a href="pedidos.html" class="leer-mas">Rastrear →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- POR QUÉ ELEGIRNOS -->
+        <section class="seccion">
+            <div class="contenedor">
+                <div class="encabezado-seccion revelar">
+                    <span class="etiqueta">Beneficios</span>
+                    <h2>¿Por qué elegirnos?</h2>
+                    <p>¿Esa lavadora que ya suena como avión, o esa plancha que pide la jubilación? Es hora de darles un descanso. Estamos contigo en cada etapa de tu hogar.</p>
+                </div>
+                <ul class="ListasInicio revelar">
+                    <li>Atención disponible 24/7</li>
+                    <li>Instalaciones 100% accesibles</li>
+                    <li>Estacionamiento privado y seguro</li>
+                    <li>Las mejores tarifas del mercado</li>
+                    <li>Garantía de satisfacción asegurada</li>
+                    <li>Atención al cliente personalizada</li>
+                    <li>Envíos rápidos y seguros</li>
+                    <li>Prácticas ecoamigables y sostenibles</li>
+                    <li>Métodos de pago flexibles</li>
+                    <li>Soporte técnico especializado</li>
+                    <li>Promociones y beneficios exclusivos</li>
+                    <li>Espacio 100% Pet &amp; Family Friendly</li>
+                    <li>Instalación y mantenimiento profesional</li>
+                    <li>Conexión Wi-Fi gratuita</li>
+                    <li>Y MUCHO MÁS!</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="seccion seccion-oscura">
+            <div class="contenedor">
+                <div class="encabezado-seccion centrado revelar">
+                    <span class="etiqueta">Presencia nacional</span>
+                    <h2>Nos encuentras en las mejores tiendas virtuales</h2>
+                    <p>Trabajamos con marcas y retailers de confianza para llegarte a cualquier rincón del Perú.</p>
+                </div>
+                <div class="aliados revelar">
+                    <span class="aliado">SAGA FALABELLA</span>
+                    <span class="aliado">RIPLEY</span>
+                    <span class="aliado">COOLBOOX</span>
+                    <span class="aliado">Y NUESTRA TIENDA ONLINE!</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CARRUSEL -->
+        <section class="seccion">
+            <div class="contenedor">
+                <div class="encabezado-seccion revelar">
+                    <span class="etiqueta">Explora</span>
+                    <h2>Consigue lo que buscas</h2>
+                    <p>Si lo necesitas para tu hogar, aquí lo encuentras.</p>
+                </div>
+
+                <div id="galeria-productos" class="carousel slide position-relative revelar" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="Imagenes/electrodomesticos.jpg" class="d-block w-100" alt="Electrodomésticos">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Electrodomésticos</h5>
+                                <p>Encuentra los mejores electrodomésticos para tu hogar.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="Imagenes/manajeYcocina.png" class="d-block w-100" alt="Menaje y Cocina">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Menaje y Cocina</h5>
+                                <p>Descubre nuestra amplia gama de utensilios de cocina.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="Imagenes/mueblesYhogar.png" class="d-block w-100" alt="Muebles y Hogar">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Muebles y Hogar</h5>
+                                <p>Encuentra los mejores muebles para tu hogar.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="Imagenes/atencionTecnica.jpg" class="d-block w-100" alt="Atención Técnica">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Atención Técnica</h5>
+                                <p>Obtén el soporte técnico que necesitas para tus productos.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#galeria-productos" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#galeria-productos" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#galeria-productos" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#galeria-productos" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#galeria-productos" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#galeria-productos" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion seccion-rosa" id="contacto">
+            <div class="contenedor bloque-contacto">
+                <div class="contacto-info revelar">
+                    <span class="etiqueta">Contacto</span>
+                    <h2>¿Necesitas asesoría?</h2>
+                    <p>Si tienes dudas o necesitas ayuda durante tu compra, nuestro equipo está listo para ayudarte. ¡Escríbenos o visítanos, nos encantará atenderte!</p>
+                    <ul>
+                        <li>📞 Atención 24/7</li>
+                        <li>📧 Respondemos a tu correo lo antes posible</li>
+                        <li>📍 Cobertura a nivel nacional</li>
+                    </ul>
+                </div>
+
+                <form action="destinoejemplo.php" method="post" class="revelar">
+                    <h3>Formulario de Contacto</h3>
+                    <p class="nota-form">Se enviará un email al negocio</p>
+                    <div class="form-grid">
+                        <div class="form-left">
+                            <label for="solicitud">Tu solicitud</label>
+                            <textarea id="solicitud" name="Mensaje" required rows="8" placeholder="Cuéntanos sobre tu solicitud, ¡con gusto te atenderemos lo antes posible!"></textarea>
+                        </div>
+                        <div class="form-right">
+                            <div>
+                                <label for="NombresApellidos">Nombre y apellidos</label>
+                                <input type="text" id="NombresApellidos" name="UserSolicitud" required minlength="3" maxlength="100" placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label for="email">Dirección de email</label>
+                                <input type="email" id="email" name="SolicitudUserEmail" required placeholder="DoeJ@gmail.com">
+                            </div>
+                            <div>
+                                <label for="telefono">Número de teléfono</label>
+                                <input type="text" id="telefono" name="SolicitudUserTelefono" required placeholder="987654321">
+                            </div>
+                        </div>
+                    </div>
+                    <input type="submit" value="Enviar mensaje">
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <div class="contenedor">
+            <div class="pie-grid">
+                <div>
+                    <a href="galexa.html" class="logo">GALEXA</a>
+                    <p>Electrodomésticos y productos para el hogar, con presencia a nivel nacional.</p>
+                </div>
+                <div>
+                    <h4>Navega</h4>
+                    <ul>
+                        <li><a href="galexa.html">Inicio</a></li>
+                        <li><a href="productos.html">Productos y servicios</a></li>
+                        <li><a href="pedidos.html">Seguimiento de pedidos</a></li>
+                        <li><a href="perfil.html">Perfil</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Ayuda</h4>
+                    <ul>
+                        <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="pedidos.html">¿Dónde está mi pedido?</a></li>
+                        <li><a href="productos.html">Soporte técnico</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Síguenos</h4>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">TikTok</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pie-final">© 2026 Galexa. Todos los derechos reservados.</div>
+        </div>
+    </footer>
+
+    <script>
+        function alternarMenu(btn) {
+            const menu = document.getElementById('menu');
+            const abierto = menu.classList.toggle('abierto');
+            btn.setAttribute('aria-expanded', abierto);
+        }
+        // Animación de aparición al hacer scroll
+        const observador = new IntersectionObserver((entradas) => {
+            entradas.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observador.unobserve(e.target); } });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.revelar').forEach(el => observador.observe(el));
+    </script>
 </body>
 </html>

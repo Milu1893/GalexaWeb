@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galexa - Seguimiento de pedidos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Diseño.css">
+</head>
+<body>
+
+    <div class="anuncio">🚚 <strong>Envíos a todo el Perú</strong> · Hasta 12 cuotas sin interés · Atención 24/7</div>
+
+    <header class="cabecera">
+        <div class="contenedor">
+            <a href="galexa.html" class="logo">GALEXA</a>
+            <button class="boton-menu" aria-label="Abrir menú" aria-expanded="false" onclick="alternarMenu(this)">☰</button>
+            <nav class="navegacion" id="menu">
+                <a href="galexa.html">Inicio</a>
+                <a href="productos.html">Productos y servicios</a>
+                <a href="pedidos.html" class="activo">Seguimiento de pedidos</a>
+                <a href="perfil.html">Perfil</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="banner-pagina">
+        <div class="contenedor">
+            <span class="etiqueta" style="color: var(--color-petaloRosa)">Seguimiento</span>
+            <h1>¿Dónde está mi pedido?</h1>
+            <p>Ingresa tu número de pedido y sigue cada etapa del envío, desde la preparación hasta tu puerta.</p>
+        </div>
+    </section>
+
+    <main>
+        <div class="contenedor">
+            <div class="rastreo">
+                <form class="rastreo-form" id="formRastreo" style="padding:0;border:0;box-shadow:none;background:none;">
+                    <div>
+                        <label for="nroPedido">Número de pedido</label>
+                        <input type="text" id="nroPedido" placeholder="Ej: GLX-1002" required>
+                    </div>
+                    <div>
+                        <label for="correoPedido">Correo de la compra</label>
+                        <input type="email" id="correoPedido" placeholder="tucorreo@ejemplo.com" required>
+                    </div>
+                    <button type="submit" class="btn-galexa">Rastrear</button>
+                </form>
+                <p class="mensaje-rastreo" id="mensajeRastreo">Prueba con los números de ejemplo: <strong>GLX-1001</strong>, <strong>GLX-1002</strong> o <strong>GLX-1003</strong>.</p>
+
+                <div class="resultado-pedido" id="resultado">
+                    <div class="pedido-cabecera">
+                        <div><small>Pedido</small><strong id="rPedido"></strong></div>
+                        <div><small>Producto</small><strong id="rProducto"></strong></div>
+                        <div><small>Tienda</small><strong id="rTienda"></strong></div>
+                        <div><small>Entrega estimada</small><strong id="rEntrega"></strong></div>
+                    </div>
+                    <ol class="linea-tiempo" id="lineaTiempo">
+                        <div class="linea-progreso" id="progreso"></div>
+                        <li class="paso"><div class="punto">🧾</div><div><strong>Pedido confirmado</strong></div></li>
+                        <li class="paso"><div class="punto">📦</div><div><strong>En preparación</strong></div></li>
+                        <li class="paso"><div class="punto">🏭</div><div><strong>Salió del almacén</strong></div></li>
+                        <li class="paso"><div class="punto">🚚</div><div><strong>En camino</strong></div></li>
+                        <li class="paso"><div class="punto">🏠</div><div><strong>Entregado</strong></div></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <section class="seccion">
+            <div class="contenedor">
+                <div class="encabezado-seccion centrado revelar">
+                    <span class="etiqueta">Cómo funciona</span>
+                    <h2>Tu compra, paso a paso</h2>
+                </div>
+                <div class="pasos-info revelar">
+                    <div class="paso-info"><div class="numero">1</div><h3>Compra</h3><p>Adquiere tu producto en Galexa o en nuestras tiendas virtuales aliadas.</p></div>
+                    <div class="paso-info"><div class="numero">2</div><h3>Rastrea</h3><p>Usa tu número de pedido para ver en qué etapa se encuentra.</p></div>
+                    <div class="paso-info"><div class="numero">3</div><h3>Recibe</h3><p>Te entregamos en tu domicilio con instalación profesional si lo necesitas.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion seccion-rosa">
+            <div class="contenedor" style="text-align:center">
+                <div class="encabezado-seccion centrado revelar" style="margin-bottom:24px">
+                    <h2>¿Problemas con tu envío?</h2>
+                    <p>Nuestro equipo de atención está disponible 24/7 para ayudarte.</p>
+                </div>
+                <a href="galexa.html#contacto" class="btn-galexa">Hablar con soporte</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <div class="contenedor">
+            <div class="pie-grid">
+                <div><a href="galexa.html" class="logo">GALEXA</a><p>Electrodomésticos y productos para el hogar, con presencia a nivel nacional.</p></div>
+                <div><h4>Navega</h4><ul><li><a href="galexa.html">Inicio</a></li><li><a href="productos.html">Productos y servicios</a></li><li><a href="pedidos.html">Seguimiento de pedidos</a></li><li><a href="perfil.html">Perfil</a></li></ul></div>
+                <div><h4>Ayuda</h4><ul><li><a href="galexa.html#contacto">Contacto</a></li><li><a href="pedidos.html">¿Dónde está mi pedido?</a></li></ul></div>
+                <div><h4>Síguenos</h4><ul><li><a href="#">Facebook</a></li><li><a href="#">Instagram</a></li><li><a href="#">TikTok</a></li></ul></div>
+            </div>
+            <div class="pie-final">© 2026 Galexa. Todos los derechos reservados.</div>
+        </div>
+    </footer>
+
+    <script>
+        function alternarMenu(btn) {
+            const abierto = document.getElementById('menu').classList.toggle('abierto');
+            btn.setAttribute('aria-expanded', abierto);
+        }
+
+        /* DEMO: datos de ejemplo. En producción, reemplaza este objeto por una
+           consulta a tu servidor (fetch a tu API / PHP) que devuelva el estado real. */
+        const pedidos = {
+            'GLX-1001': { producto: 'Refrigeradora No Frost 300 L', tienda: 'Saga Falabella', entrega: '14 nov 2026', etapa: 2 },
+            'GLX-1002': { producto: 'Smart TV 55" 4K UHD', tienda: 'Galexa', entrega: '13 nov 2026', etapa: 4 },
+            'GLX-1003': { producto: 'Lavadora Carga Frontal 11 kg', tienda: 'Galexa', entrega: '11 nov 2026', etapa: 5 }
+        };
+
+        const form = document.getElementById('formRastreo');
+        const msg = document.getElementById('mensajeRastreo');
+        const res = document.getElementById('resultado');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const codigo = document.getElementById('nroPedido').value.trim().toUpperCase();
+            const p = pedidos[codigo];
+            if (!p) {
+                res.classList.remove('visible');
+                msg.className = 'mensaje-rastreo error';
+                msg.textContent = 'No encontramos ese número de pedido. Revisa el código e inténtalo de nuevo.';
+                return;
+            }
+            msg.className = 'mensaje-rastreo';
+            msg.textContent = 'Estado actualizado hace unos minutos.';
+            document.getElementById('rPedido').textContent = codigo;
+            document.getElementById('rProducto').textContent = p.producto;
+            document.getElementById('rTienda').textContent = p.tienda;
+            document.getElementById('rEntrega').textContent = p.entrega;
+
+            const pasos = document.querySelectorAll('#lineaTiempo .paso');
+            pasos.forEach((li, i) => {
+                li.classList.toggle('hecho', i < p.etapa);
+                li.classList.toggle('actual', i === p.etapa - 1);
+            });
+            res.classList.add('visible');
+            const barra = document.getElementById('progreso');
+            barra.style.width = '0';
+            requestAnimationFrame(() => { barra.style.width = ((p.etapa - 1) / 4 * 80) + '%'; });
+        });
+
+        const obs = new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } }), { threshold: 0.12 });
+        document.querySelectorAll('.revelar').forEach(el => obs.observe(el));
+    </script>
+</body>
+</html>
