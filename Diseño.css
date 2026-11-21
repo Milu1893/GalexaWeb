@@ -148,3 +148,47 @@ div img {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     margin-top: 20px;
 }
+
+/*Estilo de Iniciar Sesión*/
+form input[type="password"] {
+    width: 100%;
+    padding: 10px 14px;
+    margin-top: 5px;
+    border: 1px solid var(--color-gris);
+    border-radius: 6px;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+form input[type="password"]:focus {
+    border-color: var(--color-magentaBrillante);
+    box-shadow: 0 0 5px rgba(213, 14, 121, 0.5);
+}
+
+.contenedor-login {
+    max-width: 450px;
+    margin: 20px auto 40px;
+    padding: 0 20px;
+}
+
+.contenedor-login h2,
+.contenedor-login > p {
+    text-align: center;
+}
+
+.volver-login {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.volver-login a {
+    color: var(--color-vinoMedio);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.volver-login a:hover {
+    color: var(--color-magentaBrillante);
+    text-decoration: underline;
+}
