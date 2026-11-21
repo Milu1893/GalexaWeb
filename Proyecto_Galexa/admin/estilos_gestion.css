@@ -1,0 +1,297 @@
+/* =====================================================
+   GALEXA · Sistema de estilos · Gestión de Productos
+   Basado en el diseño de "Control de Ventas"
+   ===================================================== */
+
+/* ===== 1. Variables de marca ===== */
+:root {
+    --color-vinoOscuro: #4a1733;
+    --color-vinoMedio: #6b2148;
+    --color-magentaOscuro: #a8175a;
+    --color-magentaBrillante: #e91e8c;
+    --color-petaloRosa: #f8d7e5;
+    --color-blancoRosa: #fdf5f9;
+    --color-blanco: #ffffff;
+    --color-gris: #6b6b6b;
+    --color-negroPuro: #1a1a1a;
+    --radio: 24px;
+    --radio-sm: 12px;
+    --sombra: 0 4px 16px rgba(74, 23, 51, 0.08);
+    --sombra-hover: 0 10px 24px rgba(168, 23, 90, 0.22);
+}
+
+/* ===== 2. Reset & base ===== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+    background:
+        radial-gradient(circle at 15% 0%, #fbe8f2 0%, transparent 42%),
+        radial-gradient(circle at 85% 100%, #f7e3ec 0%, transparent 45%),
+        var(--color-blancoRosa);
+    background-attachment: fixed;
+    color: var(--color-negroPuro);
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 40px 16px;
+}
+
+/* ===== 3. Contenedor → tarjeta de sección ===== */
+.container {
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+    background: var(--color-blanco);
+    border: 1px solid var(--color-petaloRosa);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    padding: 40px 44px;
+}
+
+/* Neutraliza el mt-4 de Bootstrap para que la tarjeta respire */
+.container.mt-4 {
+    margin-top: 0 !important;
+}
+
+/* ===== 4. Título principal ===== */
+h1 {
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    color: var(--color-vinoOscuro);
+    margin: 0 0 10px;
+    position: relative;
+    padding-bottom: 16px;
+}
+
+h1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 80px;
+    height: 4px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, var(--color-magentaBrillante), var(--color-vinoOscuro));
+}
+
+/* ===== 5. Subtítulo tipo "etiqueta" ===== */
+h2 {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-magentaOscuro);
+    background: var(--color-petaloRosa);
+    padding: 6px 16px;
+    border-radius: 999px;
+    margin: 0 0 20px;
+}
+
+/* ===== 6. Botones ===== */
+.btn {
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.02em;
+    border-radius: var(--radio-sm);
+    padding: 12px 22px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: transform .25s ease, box-shadow .25s ease,
+        background .25s ease, color .25s ease;
+    margin-right: 8px;
+}
+
+.btn:last-of-type {
+    margin-right: 0;
+}
+
+/* Botón primario (marca) */
+.btn-primary {
+    background: linear-gradient(135deg, var(--color-magentaOscuro), var(--color-vinoOscuro));
+    color: var(--color-blanco);
+    box-shadow: 0 6px 14px rgba(168, 23, 90, 0.25);
+    border-color: transparent;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background: linear-gradient(135deg, var(--color-magentaBrillante), var(--color-magentaOscuro));
+    color: var(--color-blanco);
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-hover);
+    border-color: transparent;
+}
+
+.btn-primary:focus-visible {
+    outline: 3px solid var(--color-petaloRosa);
+    outline-offset: 2px;
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(168, 23, 90, 0.3);
+}
+
+/* Botón 4 (Eliminar) → variante "peligro" sin tocar el HTML */
+.container>button.btn:nth-of-type(4) {
+    background: transparent;
+    color: #7f1d1d;
+    border: 2px solid #e69595;
+    box-shadow: none;
+}
+
+.container>button.btn:nth-of-type(4):hover,
+.container>button.btn:nth-of-type(4):focus {
+    background: #fde2e2;
+    color: #7f1d1d;
+    border-color: #c94a4a;
+    box-shadow: 0 6px 14px rgba(201, 74, 74, 0.25);
+    transform: translateY(-2px);
+}
+
+/* ===== 7. Tabla ===== */
+.table {
+    width: 100%;
+    margin-top: 8px;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: var(--color-blanco);
+    border: 1px solid var(--color-petaloRosa);
+    border-radius: var(--radio);
+    overflow: hidden;
+    box-shadow: var(--sombra);
+}
+
+.table thead th {
+    background: var(--color-vinoOscuro);
+    color: var(--color-blanco);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 16px 18px;
+    text-align: left;
+    border: none;
+    white-space: nowrap;
+}
+
+.table tbody td {
+    padding: 14px 18px;
+    border-bottom: 1px solid #f2e4ec;
+    color: var(--color-negroPuro);
+    vertical-align: middle;
+    font-size: 0.92rem;
+}
+
+.table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.table tbody tr {
+    transition: background .2s ease;
+}
+
+.table tbody tr:hover {
+    background: var(--color-blancoRosa);
+}
+
+/* Zebra personalizado (reemplaza el de Bootstrap) */
+.table-striped tbody tr:nth-of-type(odd) {
+    background: var(--color-blancoRosa);
+}
+
+.table-striped tbody tr:nth-of-type(odd):hover {
+    background: var(--color-petaloRosa);
+}
+
+/* Estado vacío cuando no hay filas (usa :has) */
+.table tbody:not(:has(> tr))::after {
+    content: "📦  Aún no hay productos registrados.";
+    display: block;
+    padding: 32px 18px;
+    text-align: center;
+    color: var(--color-gris);
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+/* ===== 8. Animación de entrada (tipo .revelar) ===== */
+@keyframes galexaFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container>* {
+    animation: galexaFadeUp .55s ease both;
+}
+
+.container>h1 {
+    animation-delay: 0s;
+}
+
+.container>h2 {
+    animation-delay: .08s;
+}
+
+.container>.btn:nth-of-type(1) {
+    animation-delay: .14s;
+}
+
+.container>.btn:nth-of-type(2) {
+    animation-delay: .18s;
+}
+
+.container>.btn:nth-of-type(3) {
+    animation-delay: .22s;
+}
+
+.container>.btn:nth-of-type(4) {
+    animation-delay: .26s;
+}
+
+.container>.table {
+    animation-delay: .32s;
+}
+
+/* ===== 9. Responsive ===== */
+@media (max-width: 720px) {
+    body {
+        padding: 20px 10px;
+    }
+
+    .container {
+        padding: 24px 20px;
+        border-radius: 16px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px !important;
+    }
+
+    .table thead th,
+    .table tbody td {
+        padding: 12px;
+        font-size: 0.85rem;
+    }
+}

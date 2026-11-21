@@ -1,0 +1,199 @@
+/* =====================================================
+   GALEXA · Sistema de estilos · Vistas del mes
+   Basado en el diseño de "Control de Ventas"
+   ===================================================== */
+
+/* ===== 1. Variables de marca ===== */
+:root {
+    --color-vinoOscuro: #4a1733;
+    --color-vinoMedio: #6b2148;
+    --color-magentaOscuro: #a8175a;
+    --color-magentaBrillante: #e91e8c;
+    --color-petaloRosa: #f8d7e5;
+    --color-blancoRosa: #fdf5f9;
+    --color-blanco: #ffffff;
+    --color-gris: #6b6b6b;
+    --color-negroPuro: #1a1a1a;
+    --radio: 24px;
+    --radio-sm: 12px;
+    --sombra: 0 4px 16px rgba(74, 23, 51, 0.08);
+    --sombra-hover: 0 12px 26px rgba(168, 23, 90, 0.18);
+}
+
+/* ===== 2. Reset & base ===== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+    background:
+        radial-gradient(circle at 15% 0%, #fbe8f2 0%, transparent 42%),
+        radial-gradient(circle at 85% 100%, #f7e3ec 0%, transparent 45%),
+        var(--color-blancoRosa);
+    background-attachment: fixed;
+    color: var(--color-negroPuro);
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 40px 16px;
+}
+
+/* ===== 3. Contenedor → tarjeta-sección ===== */
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    background: var(--color-blanco);
+    border: 1px solid var(--color-petaloRosa);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    padding: 40px 44px;
+}
+
+/* Neutraliza el mt-4 de Bootstrap para que la tarjeta respire */
+.container.mt-4 {
+    margin-top: 0 !important;
+}
+
+/* ===== 4. Título principal ===== */
+h1 {
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    color: var(--color-vinoOscuro);
+    margin: 0 0 28px;
+    position: relative;
+    padding-bottom: 16px;
+}
+
+h1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 80px;
+    height: 4px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, var(--color-magentaBrillante), var(--color-vinoOscuro));
+}
+
+/* ===== 5. Grid Bootstrap: ajuste de separación ===== */
+.row.g-4 {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 1.5rem;
+}
+
+/* ===== 6. Tarjetas (Dashboard 1–4) ===== */
+.card {
+    background: var(--color-blanco);
+    border: 1px solid var(--color-petaloRosa);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Barra de acento superior (detalle Galexa) */
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--color-magentaBrillante), var(--color-vinoOscuro));
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--sombra-hover);
+    border-color: var(--color-magentaBrillante);
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+/* Contenido de la tarjeta */
+.card-body {
+    min-height: 170px;
+    padding: 28px 22px;
+}
+
+/* Texto "Dashboard N" → chip tipo etiqueta Galexa */
+.card-body .text-muted {
+    color: var(--color-magentaOscuro) !important;
+    background: var(--color-petaloRosa);
+    font-weight: 700;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 8px 18px;
+    border-radius: 999px;
+    transition: background .3s ease, color .3s ease;
+}
+
+.card:hover .card-body .text-muted {
+    background: var(--color-magentaOscuro);
+    color: var(--color-blanco) !important;
+}
+
+/* ===== 7. Animación de entrada escalonada (tipo .revelar) ===== */
+@keyframes galexaFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.row.g-4>[class*="col-"] {
+    animation: galexaFadeUp .55s ease both;
+}
+
+.row.g-4>[class*="col-"]:nth-child(1) {
+    animation-delay: .05s;
+}
+
+.row.g-4>[class*="col-"]:nth-child(2) {
+    animation-delay: .12s;
+}
+
+.row.g-4>[class*="col-"]:nth-child(3) {
+    animation-delay: .19s;
+}
+
+.row.g-4>[class*="col-"]:nth-child(4) {
+    animation-delay: .26s;
+}
+
+/* ===== 8. Responsive ===== */
+@media (max-width: 720px) {
+    body {
+        padding: 20px 10px;
+    }
+
+    .container {
+        padding: 24px 20px;
+        border-radius: 16px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .card-body {
+        min-height: 130px;
+        padding: 20px 16px;
+    }
+}
