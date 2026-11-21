@@ -295,3 +295,77 @@ h2 {
         font-size: 0.85rem;
     }
 }
+
+/* ===== 10. RF-03: ampliación de la interfaz de gestión de productos ===== */
+/* Se conservan las variables, los botones, la tabla y el responsive originales. */
+.gestion-productos { max-width: 1240px; }
+.navegacion-gestion {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 20px;
+    border-bottom: 1px solid var(--color-petaloRosa);
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+}
+.navegacion-gestion a { color: var(--color-vinoMedio); text-decoration: none; font-size: .9rem; }
+.navegacion-gestion .marca-gestion { font-size: 1.15rem; font-weight: 900; letter-spacing: .08em; margin-right: auto; }
+.navegacion-gestion a[aria-current="page"] { font-weight: 700; text-decoration: underline; text-underline-offset: 4px; }
+.descripcion-gestion, .nota-gestion { color: var(--color-gris); }
+.aviso-gestion {
+    padding: 12px 16px;
+    border-left: 4px solid var(--color-magentaOscuro);
+    background: var(--color-blancoRosa);
+    border-radius: var(--radio-sm);
+    font-size: .9rem;
+    margin: 18px 0 24px;
+}
+.panel-gestion { border: 1px solid var(--color-petaloRosa); border-radius: var(--radio-sm); padding: 24px; margin-bottom: 24px; }
+.formulario-gestion { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.campo-gestion { display: flex; flex-direction: column; min-width: 0; gap: 6px; }
+.campo-gestion label { color: var(--color-vinoOscuro); font-weight: 700; font-size: .88rem; }
+.campo-gestion input, .campo-gestion select {
+    font: inherit;
+    width: 100%;
+    min-width: 0;
+    padding: 10px 12px;
+    border: 1px solid #d9c1cd;
+    border-radius: var(--radio-sm);
+    color: var(--color-negroPuro);
+    background: var(--color-blanco);
+}
+.campo-gestion input:focus, .campo-gestion select:focus { outline: 2px solid var(--color-magentaOscuro); outline-offset: 2px; }
+.acciones-gestion { grid-column: 1 / -1; }
+.btn-secundario { background: var(--color-blanco); color: var(--color-vinoOscuro); border-color: var(--color-petaloRosa); }
+.btn-desactivar { background: var(--color-blanco); color: #7f1d1d; border-color: #e69595; }
+.btn-editar { background: var(--color-blanco); border-color: var(--color-petaloRosa); color: var(--color-vinoOscuro); padding: 6px 10px; font-size: .8rem; }
+.gestion-productos .btn:disabled { cursor: not-allowed; opacity: .65; transform: none; box-shadow: none; }
+.gestion-productos .btn-primary:disabled { background: var(--color-vinoMedio); }
+.campo-gestion input:disabled { background: #f5f2f4; cursor: not-allowed; }
+.barra-gestion, .acciones-listado { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 10px; }
+.barra-gestion p { font-size: .85rem; color: var(--color-gris); margin: 0; }
+.buscador-gestion { width: min(100%, 360px); }
+.tabla-gestion { overflow-x: auto; border-radius: var(--radio); margin-top: 16px; }
+.tabla-gestion .table { min-width: 850px; margin-top: 0; }
+.tabla-gestion .table td:first-child { white-space: nowrap; }
+.estado { display: inline-block; padding: 4px 9px; border-radius: 99px; font-size: .78rem; font-weight: 700; white-space: nowrap; }
+.estado.disponible { background: #e4f4e9; color: #206036; }
+.estado.bajo { background: #fff0d9; color: #77430a; }
+.nota-gestion { font-size: .82rem; }
+.acciones-listado { justify-content: flex-start; margin-top: 16px; }
+.pie-gestion { text-align: center; color: var(--color-gris); font-size: .85rem; }
+@media (max-width: 960px) {
+    .formulario-gestion { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 720px) {
+    .panel-gestion { padding: 16px; }
+    .navegacion-gestion .marca-gestion { width: 100%; }
+    .tabla-gestion .btn { width: auto; margin: 0 !important; }
+}
+@media (max-width: 480px) {
+    .formulario-gestion { grid-template-columns: 1fr; }
+    .gestion-productos { padding: 20px 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .gestion-productos *, .gestion-productos > * { animation: none !important; transition: none !important; }
+}
